@@ -26,6 +26,26 @@ body {
     flex-shrink: 0; /* Prevents the sidebar from shrinking */
 }
 
+.joint-first-author-symbol {
+    /* Makes the symbol smaller and slightly raised */
+    font-size: 0.7em; 
+    vertical-align: super;
+    font-weight: bold;
+    color: #1a4d8c; /* Use the professional blue color */
+    margin-right: 5px; /* Slight space after the symbol */
+}
+
+/* Style for the descriptive note */
+.pub-authorship-note {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-top: 1px dashed #ddd; /* Separator for clarity */
+    padding-top: 5px;
+}
+
 .name {
     margin-top: 0;
     margin-bottom: 20px;

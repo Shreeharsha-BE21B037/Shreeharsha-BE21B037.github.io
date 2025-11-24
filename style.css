@@ -26,31 +26,13 @@ body {
     flex-shrink: 0; /* Prevents the sidebar from shrinking */
 }
 
-.joint-first-author-symbol {
-    /* Makes the symbol smaller and slightly raised */
-    font-size: 0.7em; 
-    vertical-align: super;
-    font-weight: bold;
-    color: #1a4d8c; /* Use the professional blue color */
-    margin-right: 5px; /* Slight space after the symbol */
-}
-
-/* Style for the descriptive note */
-.pub-authorship-note {
-    font-size: 0.9em;
-    font-style: italic;
-    color: #666;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-top: 1px dashed #ddd; /* Separator for clarity */
-    padding-top: 5px;
-}
-
+/* Updated Name Styling */
 .name {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 1.8em;
-    color: #000;
+    font-size: 2.2em; /* Increased font size */
+    font-weight: 400; /* Normal weight for professional look */
+    color: #333;
 }
 
 .profile-img {
@@ -101,6 +83,7 @@ body {
     color: #444;
 }
 
+/* General H2 Styling (used outside of sub-sections, if any) */
 h2 {
     color: #1a4d8c; 
     border-bottom: 2px solid #ccc;
@@ -115,37 +98,80 @@ hr {
     margin: 30px 0;
 }
 
+/* --- Layout for News and Publications (Side-by-Side) --- */
+
+.sub-sections {
+    display: flex; /* Activate Flexbox */
+    justify-content: space-between; /* Space elements evenly */
+    gap: 20px; /* Space between the two columns */
+    margin-top: 30px;
+}
+
+.news-column,
+.pubs-column {
+    flex: 1; /* Allows both columns to grow and share the space equally */
+    min-width: 45%; 
+}
+
+/* Optional: Style for the vertical separator line */
+.separator-line {
+    width: 1px;
+    background-color: #ccc; /* Light gray line */
+    min-height: 100%; /* Ensures the line extends down the full height */
+}
+
+/* Updated H2 Styling for News and Pre-prints */
+.sub-sections h2 {
+    font-size: 1.8em;
+    font-weight: 400; /* Normal weight */
+    color: #333;
+    text-align: left; 
+    border-bottom: none; 
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* --- News Content Styling --- */
+
 #publications ul, #news ul {
     list-style-type: none;
     padding-left: 0;
+    margin-top: 0; /* Ensures no top margin */
 }
 
 #publications li, #news li {
+    margin: 0; /* Reset margins */
+}
+
+.news-item-title {
+    font-size: 1.2em;
+    font-weight: 400; /* Normal weight */
+    color: #333;
+    margin-bottom: 3px;
+    margin-top: 15px; /* Space between news items */
+}
+
+.news-item-date {
+    font-size: 0.9em;
+    color: #666; /* Gray color for the date */
     margin-bottom: 15px;
 }
 
+/* --- Publication Specific Styling --- */
+
 .publication-item {
     margin-bottom: 25px;
-    padding: 10px;
+    padding: 15px; 
     background-color: #f9f9f9;
     border-left: 4px solid #1a4d8c;
-}
-
-.doi-link {
-    color: #666;
-    text-decoration: underline;
-    font-size: 0.9em;
-}
-
-.doi-link:hover {
-    color: #1a4d8c;
 }
 
 .pub-title {
     font-size: 1.15em;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #1a4d8c; /* Matches your heading color */
+    color: #1a4d8c; 
 }
 
 .pub-authors {
@@ -155,54 +181,43 @@ hr {
     color: #444;
 }
 
-/* Highlight your name */
 .my-author {
     font-weight: bold;
-    text-decoration: underline; /* Underline the author name */
+    text-decoration: underline; 
     color: #000;
 }
 
-/* Venue (Conference/Journal) */
 .pub-venue {
     font-style: italic;
     color: #666;
     margin-bottom: 10px;
 }
 
+/* Joint First Author Styling */
+.joint-first-author-symbol {
+    font-size: 0.7em; 
+    vertical-align: super;
+    font-weight: bold;
+    color: #1a4d8c; 
+    margin-right: 5px; 
+}
+
+.pub-authorship-note {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-top: 1px dashed #ddd; 
+    padding-top: 5px;
+}
+
 /* Links (pdf | supplementary | BioRxiv) */
 .pub-links a {
-    color: #1a4d8c; /* Blue color for links */
+    color: #1a4d8c; 
     text-decoration: none;
     font-weight: 500;
     margin-right: 5px;
 }
 
 .pub-links a:hover {
-    text-decoration: underline;
-}
-
-.publication-item {
-    /* Retaining the previous box style for clarity */
-    margin-bottom: 25px;
-    padding: 15px; /* Increased padding slightly */
-    background-color: #f9f9f9;
-    border-left: 4px solid #1a4d8c;
-}
-
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; 
-        margin: 0;
-        box-shadow: none;
-    }
-
-    .sidebar {
-        width: 100%;
-        padding: 20px;
-    }
-    
-    .content {
-        padding: 20px;
-    }
-}

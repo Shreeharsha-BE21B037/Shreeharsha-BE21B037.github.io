@@ -98,26 +98,22 @@ hr {
     margin: 30px 0;
 }
 
-/* --- Layout for News and Publications (Side-by-Side) --- */
+/* --- Layout for News and Publications  --- */
 
 .sub-sections {
-    display: flex; /* Activate Flexbox */
-    justify-content: space-between; /* Space elements evenly */
-    gap: 20px; /* Space between the two columns */
+    display: block; /* Change from flex to block to stack items */
     margin-top: 30px;
 }
 
 .news-column,
 .pubs-column {
-    flex: 1; /* Allows both columns to grow and share the space equally */
-    min-width: 45%; 
+    flex: none; /* Allows both columns to grow and share the space equally */
+    min-width: 100%; 
 }
 
 /* Optional: Style for the vertical separator line */
 .separator-line {
-    width: 1px;
-    background-color: #ccc; /* Light gray line */
-    min-height: 100%; /* Ensures the line extends down the full height */
+    display: none;/* Ensures the line extends down the full height */
 }
 
 /* Updated H2 Styling for News and Pre-prints */

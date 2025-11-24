@@ -121,6 +121,54 @@ hr {
     color: #1a4d8c;
 }
 
+.pub-title {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1a4d8c; /* Matches your heading color */
+}
+
+.pub-authors {
+    font-size: 1em;
+    margin-bottom: 5px;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* Highlight your name */
+.my-author {
+    font-weight: bold;
+    text-decoration: underline; /* Underline the author name */
+    color: #000;
+}
+
+/* Venue (Conference/Journal) */
+.pub-venue {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Links (pdf | supplementary | BioRxiv) */
+.pub-links a {
+    color: #1a4d8c; /* Blue color for links */
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+.publication-item {
+    /* Retaining the previous box style for clarity */
+    margin-bottom: 25px;
+    padding: 15px; /* Increased padding slightly */
+    background-color: #f9f9f9;
+    border-left: 4px solid #1a4d8c;
+}
+
 
 @media (max-width: 768px) {
     .container {

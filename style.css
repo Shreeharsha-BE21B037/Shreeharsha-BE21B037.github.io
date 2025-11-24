@@ -1,0 +1,140 @@
+/* --- Base Styles --- */
+body {
+    font-family: Arial, sans-serif; /* A clean, readable font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light background for a clean look */
+    color: #333; /* Default text color */
+}
+
+.container {
+    display: flex; /* Enables flexbox layout for side-by-side columns */
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    min-height: 80vh;
+}
+
+/* --- Left Sidebar Styling --- */
+.sidebar {
+    width: 300px; /* Fixed width for the sidebar */
+    padding: 30px;
+    background-color: #eee; /* Slightly darker background for the sidebar */
+    text-align: center;
+    flex-shrink: 0; /* Prevents the sidebar from shrinking */
+}
+
+.name {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #000;
+}
+
+.profile-img {
+    width: 150px; /* Size of the image */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 4px solid #fff; /* White border for contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.links p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333; /* Makes the links NOT blue */
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: #555; /* Subtle hover effect */
+}
+
+/* --- Right Content Styling --- */
+.content {
+    flex-grow: 1; 
+    padding: 30px 40px;
+}
+
+.header-content {
+    margin-bottom: 20px;
+}
+
+.title-desc {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #555;
+    margin: 5px 0;
+}
+
+.bio {
+    margin-top: 20px;
+    font-size: 1.05em;
+    color: #444;
+}
+
+h2 {
+    color: #1a4d8c; 
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 30px 0;
+}
+
+#publications ul, #news ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#publications li, #news li {
+    margin-bottom: 15px;
+}
+
+.publication-item {
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #1a4d8c;
+}
+
+.doi-link {
+    color: #666;
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+
+.doi-link:hover {
+    color: #1a4d8c;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+}

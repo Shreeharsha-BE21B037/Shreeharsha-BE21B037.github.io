@@ -1,6 +1,6 @@
 /* --- Base Styles --- */
 body {
-    font-family: Georgia, "Times New Roman", Times, serif; /* A clean, readable font */
+    font-family:'Merriweather', serif; /* A clean, readable font */
     line-height: 1.6;
     margin: 0;
     padding: 0;

@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="style.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-
+    <script>
+    function trackEvent(action, category, label) {
+      if (typeof gtag === 'function') {
+        gtag('event', action, {
+          event_category: category,
+          event_label: label
+        });
+      }
+    }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMRFNTTLFV"></script>
     <script>
@@ -30,12 +39,47 @@
             </div>
 
             <nav class="links">
-                <p><a href="assets/cv.pdf" target="_blank">Curriculum Vitae</a></p>
-                <p><a href="mailto:be21b037@smail.iitm.ac.in">Email (Edu)</a></p>
-                <p><a href="mailto:shreeharshagbhat@gmail.com">Email (Personal)</a></p>
-                <p><a href="https://github.com/Shreeharsha-BE21B037" target="_blank">GitHub</a></p>
-                <p><a href="https://scholar.google.com/citations?user=tX9KdW0AAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a></p>
-                <p><a href="https://www.linkedin.com/in/shreeharsha-g-bhat-77560223a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BihRGIYs7TBy1%2FdgfTguucg%3D%3D" target="_blank">LinkedIn</a></p>
+                <p>
+                    <a href="assets/cv.pdf" target="_blank"
+                       onclick="trackEvent('cv_download','engagement','cv'); setTimeout(()=>{},200);">
+                       Curriculum Vitae
+                    </a>
+                </p>
+            
+                <p>
+                    <a href="mailto:be21b037@smail.iitm.ac.in"
+                       onclick="trackEvent('email_click','contact','edu_email')">
+                       Email (Edu)
+                    </a>
+                </p>
+            
+                <p>
+                    <a href="mailto:shreeharshagbhat@gmail.com"
+                       onclick="trackEvent('email_click','contact','personal_email')">
+                       Email (Personal)
+                    </a>
+                </p>
+            
+                <p>
+                    <a href="https://github.com/Shreeharsha-BE21B037" target="_blank"
+                       onclick="trackEvent('github_click','social','github')">
+                       GitHub
+                    </a>
+                </p>
+            
+                <p>
+                    <a href="https://scholar.google.com/citations?user=tX9KdW0AAAAJ&hl=en&oi=ao" target="_blank"
+                       onclick="trackEvent('scholar_click','academic','google_scholar')">
+                       Google Scholar
+                    </a>
+                </p>
+            
+                <p>
+                    <a href="https://www.linkedin.com/in/shreeharsha-g-bhat-77560223a" target="_blank"
+                       onclick="trackEvent('linkedin_click','social','linkedin')">
+                       LinkedIn
+                    </a>
+                </p>
             </nav>
         </div>
 
